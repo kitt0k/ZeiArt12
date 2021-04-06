@@ -13,7 +13,7 @@
         >
     <Grid
            >
-
+       
         <StackPanel
            HorizontalAlignment="Center"
            VerticalAlignment="Center"
@@ -66,13 +66,12 @@
                 >
 
             </TextBox>
-
             <Button 
                 x:Name="Enter"
                 Content="Ввод"
                 Margin="10"
                 Click="Enter_Click"
-                ></Button>
+                />
 
             <Button 
                 x:Name="Users"
@@ -80,7 +79,15 @@
                 Margin="10"
                 Click="Users_Click"
                 ></Button>
-            
+
+            <Button 
+                x:Name="UsersWin"
+                Content="UsersWin"
+                Margin="10"
+                Click="UsersWin_Click"
+                ></Button>
+
+
         </StackPanel>
     </Grid>
 </Window>

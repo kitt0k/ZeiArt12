@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+
 
 namespace ZeiArt12
 {
@@ -26,6 +28,10 @@ namespace ZeiArt12
         {
             InitializeComponent();
         }
+
+
+
+
         private void LastName_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             int val;
@@ -54,37 +60,60 @@ namespace ZeiArt12
         }
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"Фамилия: {LastName.Text}\nИмя: {Name.Text}\nВозраст: {Age.Text}");
-        }
 
+
+            //MessageBox.Show($"Фамилия: {LastName.Text}\nИмя: {Name.Text}\nВозраст: {Age.Text}");
+        }
 
         private void Users_Click(object sender, RoutedEventArgs e)
         {
-            
-            using (StreamReader sr= new StreamReader("openusers.txt"))
-            {
-                for (int i = 0; i < File.ReadLines("openusers.txt").Count(); i++)
-                {
-                    string str = sr.ReadLine();
-                    if(str.ToString().Length>3)
-                    {
-                        MessageBox.Show(str);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Файл не выбран");
-                    }
-                }
 
-            }
-           
+
 
         }
 
+        private void UsersWin_Click(object sender, RoutedEventArgs e)
+        {
 
+            Window1 window1 = new Window1();
+            this.Close();
+            window1.Show();
+            this.Hide();
+
+        }
     }
 }
- // trash
+
+
+
+
+
+
+            //        using (StreamReader sr = new StreamReader("openusers.txt"))
+            //        {
+            //            for (int i = 0; i<File.ReadAllLines("openusers.txt").Count(); i++)
+            //            {
+            //                string user = sr.ReadLine();
+
+            //}
+
+
+
+
+
+
+            // trash
+
+
+
+           
+            
+
+
+
+
+
+
 
 
 
